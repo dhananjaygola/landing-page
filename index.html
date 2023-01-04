@@ -20,7 +20,6 @@
 
     <link rel="stylesheet" href="css/responsive.css">
     <style>
-
         /* Chrome, Safari, Edge, Opera */
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
@@ -226,12 +225,138 @@
             animation-direction: alternate;
         }
 
-            #img1 {display:block;}
-#img2 {display:none}
+        #img1 {
+            display: block;
+        }
 
-@media (max-width: 990px) {
-        #img1 {display: none;}
-    #img2 {display: block;}
+        #img2 {
+            display: none
+        }
+
+        @media (max-width: 990px) {
+            #img1 {
+                display: none;
+            }
+
+            #img2 {
+                display: block;
+            }
+        }
+
+        .slider {
+  margin: 0 auto;
+  max-width: 940px;
+}
+
+.slide_viewer {
+  height: 340px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide_group {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.slide {
+  display: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.slide:first-child {
+  display: block;
+}
+
+.slide:nth-of-type(1) {
+  background: #D7A151;
+}
+
+.slide:nth-of-type(2) {
+  background: #F4E4CD;
+}
+
+.slide:nth-of-type(3) {
+  background: #C75534;
+}
+
+.slide:nth-of-type(4) {
+  background: #D1D1D4;
+}
+
+.slide_buttons {
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+a.slide_btn {
+  color: #474544;
+  font-size: 42px;
+  margin: 0 0.175em;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.slide_btn.active, .slide_btn:hover {
+  color: #428CC6;
+  cursor: pointer;
+}
+
+.directional_nav {
+  height: 340px;
+  margin: 0 auto;
+  max-width: 940px;
+  position: relative;
+  top: -340px;
+}
+
+.previous_btn {
+  bottom: 0;
+  left: 100px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+}
+
+.next_btn {
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  right: 100px;
+  top: 0;
+}
+
+.previous_btn, .next_btn {
+  cursor: pointer;
+  height: 65px;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  width: 65px;
+}
+
+.previous_btn:hover, .next_btn:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 767px) {
+  .previous_btn {
+    left: 50px;
+  }
+  .next_btn {
+    right: 50px;
+  }
 }
     </style>
 
@@ -245,7 +370,8 @@
 
     <div class="body-wrapper">
 
-        <header class="ltn__header-area ltn__header-5 ltn__header-logo-and-mobile-menu-in-mobile ltn__header-logo-and-mobile-menu ltn__header-transparent gradient-color-2">
+        <header
+            class="ltn__header-area ltn__header-5 ltn__header-logo-and-mobile-menu-in-mobile ltn__header-logo-and-mobile-menu ltn__header-transparent gradient-color-2">
 
             <div class="ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-black">
                 <div class="container">
@@ -253,7 +379,8 @@
                         <div class="col">
                             <div class="site-logo-wrap">
                                 <div class="site-logo" style="width: 75px;">
-                                    <a href="#"><img class="logo_bg" src="img/logo.png" alt="Logo" style="max-width: 200%;"></a>
+                                    <a href="#"><img class="logo_bg" src="img/logo.png" alt="Logo"
+                                            style="max-width: 200%;"></a>
                                 </div>
                             </div>
                         </div>
@@ -269,7 +396,9 @@
                                             <li><a href="#Location">Location</a></li>
                                             <li><a href="#Gallery">Gallery</a></li>
                                             <li class="special-link">
-                                                <a href="tel:+919999999999" style="background-image: linear-gradient(to right, #006861 , #02b0a4);">Call : +91-9999999999</a>
+                                                <a href="tel:+919999999999"
+                                                    style="background-image: linear-gradient(to right, #006861 , #02b0a4);">Call
+                                                    : +91-9999999999</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -281,9 +410,14 @@
                             <div class="mobile-menu-toggle d-xl-none">
                                 <a href="#ltn__utilize-mobile-menu" class="ltn__utilize-toggle">
                                     <svg viewbox="0 0 800 600">
-                                        <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
+                                        <path
+                                            d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"
+                                            id="top"></path>
                                         <path d="M300,320 L540,320" id="middle"></path>
-                                        <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+                                        <path
+                                            d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190"
+                                            id="bottom"
+                                            transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
                                     </svg>
                                 </a>
                             </div>
@@ -315,10 +449,54 @@
                 </div>
             </div>
         </div>
-        
-        <div class="ltn__utilize-overlay"></div>
 
-        <div class="ltn__slider-area ltn__slider-4 position-relative ltn__primary-bg">
+
+        <div class="slider">
+            <div class="slide_viewer">
+              <div class="slide_group">
+                <div class="slide">
+                </div>
+                <div class="slide">
+                </div>
+                <div class="slide">
+                </div>
+                <div class="slide">
+                </div>
+              </div>
+            </div>
+          </div><!-- End // .slider -->
+          
+          <div class="slide_buttons">
+          </div>
+          
+          <div class="directional_nav">
+            <div class="previous_btn" title="Previous">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
+                <g>
+                  <g>
+                    <path fill="#474544" d="M-10.5,22.118C-10.5,4.132,4.133-10.5,22.118-10.5S54.736,4.132,54.736,22.118
+                      c0,17.985-14.633,32.618-32.618,32.618S-10.5,40.103-10.5,22.118z M-8.288,22.118c0,16.766,13.639,30.406,30.406,30.406 c16.765,0,30.405-13.641,30.405-30.406c0-16.766-13.641-30.406-30.405-30.406C5.35-8.288-8.288,5.352-8.288,22.118z"/>
+                    <path fill="#474544" d="M25.43,33.243L14.628,22.429c-0.433-0.432-0.433-1.132,0-1.564L25.43,10.051c0.432-0.432,1.132-0.432,1.563,0	c0.431,0.431,0.431,1.132,0,1.564L16.972,21.647l10.021,10.035c0.432,0.433,0.432,1.134,0,1.564	c-0.215,0.218-0.498,0.323-0.78,0.323C25.929,33.569,25.646,33.464,25.43,33.243z"/>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="next_btn" title="Next">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
+                <g>
+                  <g>
+                    <path fill="#474544" d="M22.118,54.736C4.132,54.736-10.5,40.103-10.5,22.118C-10.5,4.132,4.132-10.5,22.118-10.5	c17.985,0,32.618,14.632,32.618,32.618C54.736,40.103,40.103,54.736,22.118,54.736z M22.118-8.288	c-16.765,0-30.406,13.64-30.406,30.406c0,16.766,13.641,30.406,30.406,30.406c16.768,0,30.406-13.641,30.406-30.406 C52.524,5.352,38.885-8.288,22.118-8.288z"/>
+                    <path fill="#474544" d="M18.022,33.569c 0.282,0-0.566-0.105-0.781-0.323c-0.432-0.431-0.432-1.132,0-1.564l10.022-10.035 			L17.241,11.615c 0.431-0.432-0.431-1.133,0-1.564c0.432-0.432,1.132-0.432,1.564,0l10.803,10.814c0.433,0.432,0.433,1.132,0,1.564 L18.805,33.243C18.59,33.464,18.306,33.569,18.022,33.569z"/>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div><!-- End // .directional_nav -->
+
+
+        <!-- <div class="ltn__utilize-overlay"></div> -->
+
+        <!-- <div class="ltn__slider-area ltn__slider-4 position-relative ltn__primary-bg">
             <div class="ltn__slide-one-active----- slick-slide-arrow-1----- slick-slide-dots-1----- arrow-white----- ltn__slide-animation-active">
 
                 <div id="cf3">
@@ -327,7 +505,7 @@
                     <img class="top" src="img/main-image1.png" alt="..." width="100%">
                 </div>
                 
-                <!-- <section class="key-points section">
+                <section class="key-points section">
                 <div class="container">
                     <div class="row" style="padding-top: 61px;">
                         <div class="col-md-4 col-lg-2">
@@ -386,7 +564,7 @@
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
 
             <div class="ltn__slide-item  bg-image--- bg-overlay-theme-black-10--- pb-0 pb" data-bs-bg="img/slider/41.html" style="padding-top: 0px;">
@@ -415,145 +593,174 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+    </div>
+
+
+
+
+    <div class="pt-100 pt" style="justify-content: center; text-align: center; overflow-x: hidden;">
+        <h3 style="padding-bottom: 0px; margin-bottom: 0px;">Lorem Builder Projects</h3>
+        <p style="margin-bottom: 40px;">AT LOREM CITY PHASE I II & III, IPSUM</p>
+        <div>
+            <hr style="max-width: 90%; border: 0.5px solid grey; margin-bottom: 20px;">
         </div>
-        </div>
-
-
-
-
-        <div class="pt-100 pt" style="justify-content: center; text-align: center; overflow-x: hidden;">
-            <h3 style="padding-bottom: 0px; margin-bottom: 0px;">Lorem Builder Projects</h3>
-            <p style="margin-bottom: 40px;">AT LOREM CITY PHASE I II & III, IPSUM</p>
-            <div>
-                <hr style="max-width: 90%; border: 0.5px solid grey; margin-bottom: 20px;">
-            </div>
-            <div class="row remove-margin" style="margin-right: -85px; margin-left: 85px;">
-                <div class="col-lg-4" style="justify-content: flex-start; text-align: start; margin: 20px 0px 20px 0px;">
-                    <div style="display: inline;"><img src="img/svgs/house-fill.svg" alt="..." width="10%" style="vertical-align: unset;"></div>
-                    <div style="text-align: left; display: inline-block; align-items: center; padding-left: 15px;">
-                        <h6 style=" margin-bottom: 0px;">TYPE OF PROPERTY</h6>
-                        <p style="margin-bottom: 10px;">Independent Floors</p>
-                    </div>
-                </div>
-                <div class="col-lg-4" style="justify-content: flex-start; text-align: start; margin: 20px 0px 20px 0px;">
-                    <div style="display: inline;"><img src="img/svgs/geo-alt-fill.svg" alt="..." width="10%" style="vertical-align: unset;"></div>
-                    <div style="text-align: left; display: inline-block; align-items: center; padding-left: 15px;">
-                        <h6 style=" margin-bottom: 0px;">LOCATION</h6>
-                        <p style="margin-bottom: 10px;">Sector 99, Ipsum</p>
-                    </div>
-                </div>
-                <div class="col-lg-4" style="justify-content: flex-start; text-align: start; margin: 20px 0px 20px 0px;">
-                    <div style="display: inline;"><img src="img/svgs/info-circle-fill.svg" alt="..." width="10%" style="vertical-align: unset;"></div>
-                    <div style="text-align: left; display: inline-block; align-items: center; padding-left: 15px;">
-                        <h6 style=" margin-bottom: 0px;">BEDROOMS</h6>
-                        <p style="margin-bottom: 10px;">4 BHK Independent Floors</p>
-                    </div>
+        <div class="row remove-margin" style="margin-right: -85px; margin-left: 85px;">
+            <div class="col-lg-4" style="justify-content: flex-start; text-align: start; margin: 20px 0px 20px 0px;">
+                <div style="display: inline;"><img src="img/svgs/house-fill.svg" alt="..." width="10%"
+                        style="vertical-align: unset;"></div>
+                <div style="text-align: left; display: inline-block; align-items: center; padding-left: 15px;">
+                    <h6 style=" margin-bottom: 0px;">TYPE OF PROPERTY</h6>
+                    <p style="margin-bottom: 10px;">Independent Floors</p>
                 </div>
             </div>
-            <div class="row remove-margin" style="margin-right: -85px; margin-left: 85px;">
-                <div class="col-lg-4" style="justify-content: flex-start; text-align: start; margin: 20px 0px 20px 0px;">
-                    <div style="display: inline;"><img src="img/svgs/key-fill.svg" alt="..." width="10%" style="vertical-align: unset;"></div>
-                    <div style="text-align: left; display: inline-block; align-items: center; padding-left: 15px;">
-                        <h6 style=" margin-bottom: 0px;">POSSESSION</h6>
-                        <p style="margin-bottom: 10px;">2023 Onwards</p>
-                    </div>
+            <div class="col-lg-4" style="justify-content: flex-start; text-align: start; margin: 20px 0px 20px 0px;">
+                <div style="display: inline;"><img src="img/svgs/geo-alt-fill.svg" alt="..." width="10%"
+                        style="vertical-align: unset;"></div>
+                <div style="text-align: left; display: inline-block; align-items: center; padding-left: 15px;">
+                    <h6 style=" margin-bottom: 0px;">LOCATION</h6>
+                    <p style="margin-bottom: 10px;">Sector 99, Ipsum</p>
                 </div>
-                <div class="col-lg-4" style="justify-content: flex-start; text-align: start; margin: 20px 0px 20px 0px;">
-                    <div style="display: inline;"><img src="img/svgs/map.svg" alt="..." width="10%" style="vertical-align: unset;"></div>
-                    <div style="text-align: left; display: inline-block; align-items: center; padding-left: 15px;">
-                        <h6 style=" margin-bottom: 0px;">SIZES</h6>
-                        <p style="margin-bottom: 10px;">3400 Sq. ft.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4" style="justify-content: flex-start; text-align: start; margin: 20px 0px 20px 0px;">
-                    <div style="display: inline;"><img src="img/svgs/tags-fill.svg" alt="..." width="10%" style="vertical-align: unset;"></div>
-                    <div style="text-align: left; display: inline-block; align-items: center; padding-left: 15px;">
-                        <h6 style=" margin-bottom: 0px;">PRICE</h6>
-                        <p style="margin-bottom: 10px;">₹ 9.99 Cr* Onwards</p>
-                    </div>
+            </div>
+            <div class="col-lg-4" style="justify-content: flex-start; text-align: start; margin: 20px 0px 20px 0px;">
+                <div style="display: inline;"><img src="img/svgs/info-circle-fill.svg" alt="..." width="10%"
+                        style="vertical-align: unset;"></div>
+                <div style="text-align: left; display: inline-block; align-items: center; padding-left: 15px;">
+                    <h6 style=" margin-bottom: 0px;">BEDROOMS</h6>
+                    <p style="margin-bottom: 10px;">4 BHK Independent Floors</p>
                 </div>
             </div>
         </div>
-
-
-        <div class="pt-50 pb-50" style="width: fit-content; margin: auto;">
-            <div class="row" style="margin-left: 0px; margin-right: 0px;">
-                <div class="col-lg-6 pt-50" style=" display: block; margin-left: auto; margin-right: auto;">
-                    <img src="img/1.png" alt="..." style="border-radius: 5px;">
+        <div class="row remove-margin" style="margin-right: -85px; margin-left: 85px;">
+            <div class="col-lg-4" style="justify-content: flex-start; text-align: start; margin: 20px 0px 20px 0px;">
+                <div style="display: inline;"><img src="img/svgs/key-fill.svg" alt="..." width="10%"
+                        style="vertical-align: unset;"></div>
+                <div style="text-align: left; display: inline-block; align-items: center; padding-left: 15px;">
+                    <h6 style=" margin-bottom: 0px;">POSSESSION</h6>
+                    <p style="margin-bottom: 10px;">2023 Onwards</p>
                 </div>
-                <div class="col-lg-6 pt-50 pb-50">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="remove-pb" style="justify-content: center; text-align: center; margin-bottom: 50px; padding-left: 5px; padding-right: 5px;">
-                                <img src="img/4.png" alt="..." style="border-radius: 5px;">
-                                <h6 style="line-height: 1.5; font-size: small; color: teal; padding-top: 10px; padding-bottom: 10px;">Enhanced floor-to-floor <br>height up to 3.2 meters</h6>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="remove-pb" style="justify-content: center; text-align: center; margin-bottom: 50px; padding-left: 5px; padding-right: 5px;">
-                                <img src="img/5.png" alt="..." style="border-radius: 5px;">
-                                <h6 style="line-height: 1.5; font-size: small; color: teal; padding-top: 10px; padding-bottom: 10px;">Home <br>automation**</h6>
-                            </div>
+            </div>
+            <div class="col-lg-4" style="justify-content: flex-start; text-align: start; margin: 20px 0px 20px 0px;">
+                <div style="display: inline;"><img src="img/svgs/map.svg" alt="..." width="10%"
+                        style="vertical-align: unset;"></div>
+                <div style="text-align: left; display: inline-block; align-items: center; padding-left: 15px;">
+                    <h6 style=" margin-bottom: 0px;">SIZES</h6>
+                    <p style="margin-bottom: 10px;">3400 Sq. ft.</p>
+                </div>
+            </div>
+            <div class="col-lg-4" style="justify-content: flex-start; text-align: start; margin: 20px 0px 20px 0px;">
+                <div style="display: inline;"><img src="img/svgs/tags-fill.svg" alt="..." width="10%"
+                        style="vertical-align: unset;"></div>
+                <div style="text-align: left; display: inline-block; align-items: center; padding-left: 15px;">
+                    <h6 style=" margin-bottom: 0px;">PRICE</h6>
+                    <p style="margin-bottom: 10px;">₹ 9.99 Cr* Onwards</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pt-50 pb-50" style="width: fit-content; margin: auto;">
+        <div class="row" style="margin-left: 0px; margin-right: 0px;">
+            <div class="col-lg-6 pt-50" style=" display: block; margin-left: auto; margin-right: auto;">
+                <img src="img/1.png" alt="..." style="border-radius: 5px;">
+            </div>
+            <div class="col-lg-6 pt-50 pb-50">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="remove-pb"
+                            style="justify-content: center; text-align: center; margin-bottom: 50px; padding-left: 5px; padding-right: 5px;">
+                            <img src="img/4.png" alt="..." style="border-radius: 5px;">
+                            <h6
+                                style="line-height: 1.5; font-size: small; color: teal; padding-top: 10px; padding-bottom: 10px;">
+                                Enhanced floor-to-floor <br>height up to 3.2 meters</h6>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="remove-pb" style="justify-content: center; text-align: center; margin-bottom: 50px; padding-left: 5px; padding-right: 5px;">
-                                <img src="img/6.png" alt="..." style="border-radius: 5px;">
-                                <h6 style="line-height: 1.5; font-size: small; color: teal; padding-top: 10px; padding-bottom: 10px;">Exquisite <br>terrace garden</h6>
-                            </div>
+                    <div class="col-lg-6">
+                        <div class="remove-pb"
+                            style="justify-content: center; text-align: center; margin-bottom: 50px; padding-left: 5px; padding-right: 5px;">
+                            <img src="img/5.png" alt="..." style="border-radius: 5px;">
+                            <h6
+                                style="line-height: 1.5; font-size: small; color: teal; padding-top: 10px; padding-bottom: 10px;">
+                                Home <br>automation**</h6>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="remove-pb" style="justify-content: center; text-align: center; margin-bottom: 50px; padding-left: 5px; padding-right: 5px;">
-                                <img src="img/2.png" alt="..." style="border-radius: 5px;">
-                                <h6 style="line-height: 1.5; font-size: small; color: teal; padding-top: 10px; padding-bottom: 10px;">Fully fitted modular <br>kitchen with appliances**</h6>
-                            </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="remove-pb"
+                            style="justify-content: center; text-align: center; margin-bottom: 50px; padding-left: 5px; padding-right: 5px;">
+                            <img src="img/6.png" alt="..." style="border-radius: 5px;">
+                            <h6
+                                style="line-height: 1.5; font-size: small; color: teal; padding-top: 10px; padding-bottom: 10px;">
+                                Exquisite <br>terrace garden</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="remove-pb"
+                            style="justify-content: center; text-align: center; margin-bottom: 50px; padding-left: 5px; padding-right: 5px;">
+                            <img src="img/2.png" alt="..." style="border-radius: 5px;">
+                            <h6
+                                style="line-height: 1.5; font-size: small; color: teal; padding-top: 10px; padding-bottom: 10px;">
+                                Fully fitted modular <br>kitchen with appliances**</h6>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
 
-        <div id="img1" class="pb-50" style="justify-content: center; text-align: center; margin-left: 20px; margin-right: 20px; margin-bottom: 60px;">
-            <img src="img/3.png" alt="..." style="width: fit-content; margin: auto; border-radius: 5px;">
-        </div>
-        <div id="img2" class="pb-50" style="justify-content: center; text-align: center; margin-left: 10px; margin-right: 10px; margin-bottom: 60px;">
+    <div id="img1" class="pb-50"
+        style="justify-content: center; text-align: center; margin-left: 20px; margin-right: 20px; margin-bottom: 60px;">
+        <img src="img/3.png" alt="..." style="width: fit-content; margin: auto; border-radius: 5px;">
+    </div>
+    <div id="img2" class="pb-50"
+        style="justify-content: center; text-align: center; margin-left: 10px; margin-right: 10px; margin-bottom: 60px;">
         <img src="img/glow.png" alt="..." style="width: fit-content; margin: auto; border-radius: 5px;">
     </div>
-    
-    
+
+
     <div class="ltn__about-us-area pt-50 remove-mb pb-70" style="background-color: #efefef; margin-bottom: 140px;">
         <div style="justify-content: center; text-align: center;">
-                    <h2 style="padding-bottom: 20px;">PROJECT VIDEOS</h2>
-                </div>
-            <div class="container pt-20">
-                <div class="row">
-                    <div class="col-lg-6 align-self-center">
-                        <div style="justify-content: center; text-align: center;">
-                            <h3 style="margin-bottom: 0px; padding-bottom: 0px;">Cartoon - On & On feat. Daniel Levi</h3>
-                            <p class="remove-pb">NCS: Music Without Limitations</p>
-                        </div>
-                        <div class="pb-apply" style="margin: auto; text-align: center;">
-                            <iframe width="90%" height="300" src="https://www.youtube.com/embed/K4DyBUG242c?wmode=opaque&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 10px;"></iframe>
-                        </div>
+            <h2 style="padding-bottom: 20px;">PROJECT VIDEOS</h2>
+        </div>
+        <div class="container pt-20">
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div style="justify-content: center; text-align: center;">
+                        <h3 style="margin-bottom: 0px; padding-bottom: 0px;">Cartoon - On & On feat. Daniel Levi</h3>
+                        <p class="remove-pb">NCS: Music Without Limitations</p>
                     </div>
-                    <div class="col-lg-6 align-self-center">
-                        <div style="justify-content: center; text-align: center;">
-                        <h3 style="margin-bottom: 0px; padding-bottom: 0px;">TheFatRat, Slaydit & Anjulie - Stronger</h3>
+                    <div class="pb-apply" style="margin: auto; text-align: center;">
+                        <iframe width="90%" height="300"
+                            src="https://www.youtube.com/embed/K4DyBUG242c?wmode=opaque&rel=0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen style="border-radius: 10px;"></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div style="justify-content: center; text-align: center;">
+                        <h3 style="margin-bottom: 0px; padding-bottom: 0px;">TheFatRat, Slaydit & Anjulie - Stronger
+                        </h3>
                         <p class="remove-pb">Stronger is copyright FREE on YouTube</p>
-                        </div>
-                        <div class="pb-apply" style="margin: auto; text-align: center;">
-                            <iframe width="90%" height="300" src="https://www.youtube.com/embed/gHgv19ip-0c?wmode=opaque&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 10px;"></iframe>
-                        </div>
+                    </div>
+                    <div class="pb-apply" style="margin: auto; text-align: center;">
+                        <iframe width="90%" height="300"
+                            src="https://www.youtube.com/embed/gHgv19ip-0c?wmode=opaque&rel=0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen style="border-radius: 10px;"></iframe>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <section class="conscient-amenities section" id="highlights">
+    <section class="conscient-amenities section" id="highlights">
         <div class="container">
             <h2>AMENITIES AND FACILITIES</h2>
             <p>To Make Your Dream Life a reality with Luxurious Living</p>
@@ -599,68 +806,296 @@
     </section>
 
 
-        <div class="ltn__about-us-area pt-130 pb-90 ">
-            <div class="container">
-                <div id="About_us" class="row">
-                    <div class="col-lg-6 align-self-center">
-                        <div class="about-us-img-wrap about-img-left">
-                            <img src="img/others/7.png" alt="About Us Image">
+    <div class="ltn__about-us-area pt-130 pb-90 ">
+        <div class="container">
+            <div id="About_us" class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="about-us-img-wrap about-img-left">
+                        <img src="img/others/7.png" alt="About Us Image">
+                    </div>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div class="about-us-info-wrap">
+                        <div class="section-title-area ltn__section-title-2--- mb-20">
+                            <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">About Us</h6>
+                            <h1 class="section-title">Project <span>Overview</span></h1>
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, modi, fugit, deleniti
+                                sint voluptates rerum quaerat adipisci facere quam porro vero iusto beatae in tempore
+                                consequatur temporibus corporis quia</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, labore ut magni ab quidem
+                                officia obcaecati neque dolorem sunt. Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Nostrum id dicta numquam fugiat corporis consequuntur aliquid ab.
+                                Vitae accusantium impedit quis iste ut optio quod atque magnam, accusamus, harum quae.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <ul class="ltn__list-item-half clearfix">
+                            <li>
+                                <i class="fa fa-home"></i>
+                                <b>Residential Projects</b>
+                            </li>
+                            <li>
+                                <i class="fa fa-location-arrow"></i>
+                                <b>Sector-99, Ipsum</b>
+                            </li>
+                        </ul>
+                        <div class="btn-wrapper animated">
+                            <a data-bs-toggle="modal" data-bs-target="#brochure" href="#"
+                                class="theme-btn-1 btn btn-effect-1"
+                                style="background-image: linear-gradient(to right, #006861 , #02b0a4);"><i
+                                    class="fa fa-download"></i>&nbsp; Brochure</a>
+                            <a data-bs-toggle="modal" data-bs-target="#rateCard" href="#"
+                                class="theme-btn-1 btn btn-effect-1"
+                                style="background-image: linear-gradient(to right, #006861 , #02b0a4);"><i
+                                    class="fa fa-download"></i>&nbsp; Rate Card</a>
+                            <a data-bs-toggle="modal" data-bs-target="#floorPlan" href="#"
+                                class="theme-btn-1 btn btn-effect-1"
+                                style="background-image: linear-gradient(to right, #006861 , #02b0a4);"><i
+                                    class="fa fa-download"></i>&nbsp; Floor Plan</a>
                         </div>
                     </div>
-                    <div class="col-lg-6 align-self-center">
-                        <div class="about-us-info-wrap">
-                            <div class="section-title-area ltn__section-title-2--- mb-20">
-                                <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">About Us</h6>
-                                <h1 class="section-title">Project <span>Overview</span></h1>
-                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, modi, fugit, deleniti sint voluptates rerum quaerat adipisci facere quam porro vero iusto beatae in tempore consequatur temporibus corporis quia</p>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, labore ut magni ab quidem officia obcaecati neque dolorem sunt. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum id dicta numquam fugiat corporis consequuntur aliquid ab. Vitae accusantium impedit quis iste ut optio quod atque magnam, accusamus, harum quae. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <ul class="ltn__list-item-half clearfix">
-                                <li>
-                                    <i class="fa fa-home"></i>
-                                    <b>Residential Projects</b>
-                                </li>
-                                <li>
-                                    <i class="fa fa-location-arrow"></i>
-                                    <b>Sector-99, Ipsum</b>
-                                </li>
-                            </ul>
-                            <div class="btn-wrapper animated">
-                                <a data-bs-toggle="modal" data-bs-target="#brochure" href="#" class="theme-btn-1 btn btn-effect-1" style="background-image: linear-gradient(to right, #006861 , #02b0a4);"><i class="fa fa-download"></i>&nbsp; Brochure</a>
-                                <a data-bs-toggle="modal" data-bs-target="#rateCard" href="#" class="theme-btn-1 btn btn-effect-1" style="background-image: linear-gradient(to right, #006861 , #02b0a4);"><i class="fa fa-download"></i>&nbsp; Rate Card</a>
-                                <a data-bs-toggle="modal" data-bs-target="#floorPlan" href="#" class="theme-btn-1 btn btn-effect-1" style="background-image: linear-gradient(to right, #006861 , #02b0a4);"><i class="fa fa-download"></i>&nbsp; Floor Plan</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ltn__modal-area ltn__add-to-cart-modal-area">
+        <div class="modal fade" id="brochure" tabindex="-1">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="ltn__quick-view-modal-inner">
+                            <div class="modal-product-item">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <form action="" method="POST"
+                                            style="justify-content: center; text-align: center;"
+                                            onsubmit="window.open('documents/Brochure.pdf','_blank')">
+                                            <div id='results'></div>
+                                            <h3>Book A Site Visit</h3>
+                                            <input type="text" name="name" class="form-control mob" placeholder="Name *"
+                                                class="form-control" required="">
+                                            <input type="text" pattern="[789][0-9]{9}" class="form-control mob"
+                                                name="mobile" placeholder="Mobile *" required="">
+
+                                            <input type="email" name="email" class="form-control mob"
+                                                placeholder="Email :" required="">
+
+                                            <button class="btn theme-btn-1 btn-effect-3 text-uppercase" name="send"
+                                                type="submit">Book Now</button>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <div class="ltn__modal-area ltn__add-to-cart-modal-area">
-            <div class="modal fade" id="brochure" tabindex="-1">
-                <div class="modal-dialog modal-md" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+    <div class="ltn__modal-area ltn__add-to-cart-modal-area">
+        <div class="modal fade" id="rateCard" tabindex="-1">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="ltn__quick-view-modal-inner">
+                            <div class="modal-product-item">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <form action="" method="POST"
+                                            style="justify-content: center; text-align: center;"
+                                            onsubmit="window.open('documents/Rate%20Card.pdf','_blank')">
+                                            <div id='results'></div>
+                                            <h3>Book A Site Visit</h3>
+                                            <input type="text" name="name" class="form-control mob" placeholder="Name *"
+                                                class="form-control" required="">
+                                            <input type="text" pattern="[789][0-9]{9}" class="form-control mob"
+                                                name="mobile" placeholder="Mobile *" required="">
+
+                                            <input type="email" name="email" class="form-control mob"
+                                                placeholder="Email :" required="">
+
+                                            <button class="btn theme-btn-1 btn-effect-3 text-uppercase" name="send"
+                                                type="submit">Book Now</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            <div class="ltn__quick-view-modal-inner">
-                                <div class="modal-product-item">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <form action="" method="POST" style="justify-content: center; text-align: center;" onsubmit="window.open('documents/Brochure.pdf','_blank')">
-                                                <div id='results'></div>
-                                                <h3>Book A Site Visit</h3>
-                                                <input type="text" name="name" class="form-control mob" placeholder="Name *" class="form-control" required="">
-                                                <input type="text" pattern="[789][0-9]{9}" class="form-control mob" name="mobile" placeholder="Mobile *" required="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                                                <input type="email" name="email" class="form-control mob" placeholder="Email :" required="">
 
-                                                <button class="btn theme-btn-1 btn-effect-3 text-uppercase" name="send" type="submit">Book Now</button>
-                                            </form>
+    <div class="ltn__modal-area ltn__add-to-cart-modal-area">
+        <div class="modal fade" id="floorPlan" tabindex="-1">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="ltn__quick-view-modal-inner">
+                            <div class="modal-product-item">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <form action="" method="POST"
+                                            style="justify-content: center; text-align: center;"
+                                            onsubmit="window.open('documents/Floor%20Plan.pdf','_blank')">
+                                            <div id='results'></div>
+                                            <h3>Book A Site Visit</h3>
+                                            <input type="text" name="name" class="form-control mob" placeholder="Name *"
+                                                class="form-control" required="">
+                                            <input type="text" pattern="[789][0-9]{9}" class="form-control mob"
+                                                name="mobile" placeholder="Mobile *" required="">
+
+                                            <input type="email" name="email" class="form-control mob"
+                                                placeholder="Email :" required="">
+
+                                            <button class="btn theme-btn-1 btn-effect-3 text-uppercase" name="send"
+                                                type="submit">Book Now</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="ltn__about-us-area section-bg-1 bg-image-right-before pt-120 pb-90">
+        <div class="container">
+            <div id="Highlights" class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="about-us-info-wrap">
+                        <div class="section-title-area ltn__section-title-2--- mb-20">
+                            <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Qualities</h6>
+                            <h1 class="section-title">Location Advantages</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit maiores dolorum tempore
+                                asperiores commodi nobis, officiis accusamus fugiat mollitia Sector-99 are:</p>
+                        </div>
+                        <ul class="ltn__list-item-half-new ltn__list-item-half ltn__list-item-half-2 clearfix">
+                            <li style="padding-bottom: 25px;">
+                                <i class="icon-done"></i>
+                                <b>Ample Greenery.</b>
+                            </li>
+                            <li style="padding-bottom: 25px;">
+                                <i class="icon-done"></i>
+                                <b>Near Lorem Ipsum.</b>
+                            </li>
+                            <li style="padding-bottom: 25px;">
+                                <i class="icon-done"></i>
+                                <b>Developing Sector.</b>
+                            </li>
+                            <li style="padding-bottom: 25px;">
+                                <i class="icon-done"></i>
+                                <b>Sound Road Network.</b>
+                            </li>
+                            <li style="padding-bottom: 25px;">
+                                <i class="icon-done"></i>
+                                <b>There are around 532 units on offer.</b>
+                            </li>
+                            <li style="padding-bottom: 25px;">
+                                <i class="icon-done"></i>
+                                <b>The project is spread over an area of 10.1 acres.</b>
+                            </li>
+                        </ul>
+                        <div class="ltn__animation-pulse2 text-center mt-30">
+                            <a href="tel:+919999999999" class="ltn__video-play-btn bg-white--- ltn__secondary-bg">
+                                <i class="icon-phone-call  ltn__secondary-color--- white-color"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div class="about-us-img-wrap about-img-left">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ltn__apartments-plan-area pt-120 pb-70">
+        <div class="container">
+            <div id="Apartments_Plan" class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2--- text-center">
+                        <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Apartment Sketch</h6>
+                        <h1 class="section-title">Apartments Plan</h1>
+                    </div>
+                    <div class="ltn__tab-menu ltn__tab-menu-3 ltn__tab-menu-top-right-- text-uppercase--- text-center">
+                        <div class="nav">
+                            <a class="active show" data-bs-toggle="tab" href="#liton_tab_3_2">3 BHK</a>
+                            <a data-bs-toggle="tab" href="#liton_tab_3_3" class="">4 BHK</a>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="liton_tab_3_2">
+                            <div class="ltn__product-tab-content-inner">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="apartments-plan-img">
+                                            <h6 style="margin:0px; justify-content: center; text-align: center; ">3 BHK
+                                                2015 Sq.Ft</h6>
+                                            <a href="img/3bhk-1.jpg" data-rel="lightcase:myCollection">
+                                                <img src="img/3bhk-1.jpg" alt="#">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="apartments-plan-img">
+                                            <h6 style="margin:0px; justify-content: center; text-align: center; ">3 BHK
+                                                2050 Sq.Ft</h6>
+                                            <a href="img/3bhk-2.jpg" data-rel="lightcase:myCollection">
+                                                <img src="img/3bhk-2.jpg" alt="#">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="justify-content: center; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <div class="apartments-plan-img">
+                                            <h6 style="margin:0px; justify-content: center; text-align: center; ">3 BHK
+                                                + Servent 2150 Sq.Ft</h6>
+                                            <a href="img/3bhk-3.jpg" data-rel="lightcase:myCollection">
+                                                <img src="img/3bhk-3.jpg" alt="#">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="liton_tab_3_3">
+                            <div class="ltn__product-tab-content-inner">
+                                <div class="row" style="justify-content: center; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <div class="apartments-plan-img">
+                                            <h6 style="margin:0px; justify-content: center; text-align: center; ">4 BHK
+                                                + Servent 2675 Sq.Ft</h6>
+                                            <a href="img/4bhk.jpg" data-rel="lightcase:myCollection">
+                                                <img src="img/4bhk.jpg" alt="#">
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -670,750 +1105,615 @@
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <div class="ltn__modal-area ltn__add-to-cart-modal-area">
-            <div class="modal fade" id="rateCard" tabindex="-1">
-                <div class="modal-dialog modal-md" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="ltn__quick-view-modal-inner">
-                                <div class="modal-product-item">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <form action="" method="POST" style="justify-content: center; text-align: center;" onsubmit="window.open('documents/Rate%20Card.pdf','_blank')">
-                                                <div id='results'></div>
-                                                <h3>Book A Site Visit</h3>
-                                                <input type="text" name="name" class="form-control mob" placeholder="Name *" class="form-control" required="">
-                                                <input type="text" pattern="[789][0-9]{9}" class="form-control mob" name="mobile" placeholder="Mobile *" required="">
-
-                                                <input type="email" name="email" class="form-control mob" placeholder="Email :" required="">
-
-                                                <button class="btn theme-btn-1 btn-effect-3 text-uppercase" name="send" type="submit">Book Now</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <div id="Highlights" class="pt mt"
+        style="justify-content: center; text-align: center; overflow-x: hidden; overflow-y: hidden;">
+        <div class="row">
+            <div class="col-lg-6 remove-img"
+                style="justify-content: center; text-align: center; vertical-align: middle;">
+                <img src="img/highlights.jpg" alt="..." height="100%" style="max-width: none; margin: auto;">
+            </div>
+            <div class="col-lg-6"
+                style="justify-content: flex-start; text-align: start; background-color: black; padding: 5px 15px 15px 30px; margin-left: 0px;">
+                <div>
+                    <div style="display: inline;"><img src="img/svgs/life-preserver.svg" alt="..." width="75px"
+                            style="padding: 25px; border-radius: 5rem; background-color: white; margin: auto;"></div>
+                    <div
+                        style="text-align: left; display: inline-block; align-items: center; margin-left: 20px; width: 70%; letter-spacing: 1px; vertical-align: middle; padding-top: 26px;">
+                        <h5 style="color: #fff;margin-bottom: 10px;">WORLD CLASS AMENITIES</h5>
+                        <p style="color: #fff; line-height: 1.6;">Lorem Ipsum is loaded with tons of world class
+                            amenities such as clubhouse, Cricket ground, swimming pool, Party Lawn etc.</p>
+                    </div>
+                </div>
+                <div style="margin-top: 10px;">
+                    <div
+                        style="display: inline;display: inline-block; background-color: #fff; border-radius: 5rem; overflow: hidden; perspective: 0px; vertical-align: middle;">
+                        <img src="img/svgs/map.svg" alt="..." width="75px"
+                            style="padding: 25px; background-color: white; margin: auto;"></div>
+                    <div
+                        style="text-align: left; display: inline-block; align-items: center; margin-left: 20px; width: 70%; letter-spacing: 1px; vertical-align: middle; padding-top: 26px;">
+                        <h5 style="color: #fff;margin-bottom: 10px;">EXQUISITE LOCATION</h5>
+                        <p style="color: #fff; line-height: 1.6;">We are situated in the most peculiar location of
+                            Ipsum. Though have multiple location advantages.</p>
+                    </div>
+                </div>
+                <div style="margin-top: 10px;">
+                    <div
+                        style="display: inline;display: inline-block; background-color: #fff; border-radius: 5rem; overflow: hidden; perspective: 0px; vertical-align: middle;">
+                        <img src="img/svgs/people-fill.svg" alt="..." width="75px"
+                            style="padding: 25px; background-color: white; margin: auto;"></div>
+                    <div
+                        style="text-align: left; display: inline-block; align-items: center; margin-left: 20px; width: 70%; letter-spacing: 1px; vertical-align: middle; padding-top: 26px;">
+                        <h5 style="color: #fff;margin-bottom: 10px;">WELL SUITED FOR FAMILY</h5>
+                        <p style="color: #fff; line-height: 1.6;">Lorem Ipsum is well suited for you and your family.
+                            Enjoy your precious moments in the green villa.</p>
+                    </div>
+                </div>
+                <div style="margin-top: 10px;">
+                    <div
+                        style="display: inline;display: inline-block; background-color: #fff; border-radius: 5rem; overflow: hidden; perspective: 0px; vertical-align: middle;">
+                        <img src="img/svgs/currency-rupee.svg" alt="..." width="75px"
+                            style="padding: 25px; background-color: white; margin: auto;"></div>
+                    <div
+                        style="text-align: left; display: inline-block; align-items: center; margin-left: 20px; width: 70%; letter-spacing: 1px; vertical-align: middle; padding-top: 26px;">
+                        <h5 style="color: #fff;margin-bottom: 10px;">AFFORDABLE PRICE</h5>
+                        <p style="color: #fff; line-height: 1.6;">Lorem Ipsum provide you with the best price for your
+                            luxurious life. Starting @₹99 Lac*.</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <div class="ltn__modal-area ltn__add-to-cart-modal-area">
-            <div class="modal fade" id="floorPlan" tabindex="-1">
-                <div class="modal-dialog modal-md" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="ltn__quick-view-modal-inner">
-                                <div class="modal-product-item">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <form action="" method="POST" style="justify-content: center; text-align: center;" onsubmit="window.open('documents/Floor%20Plan.pdf','_blank')">
-                                                <div id='results'></div>
-                                                <h3>Book A Site Visit</h3>
-                                                <input type="text" name="name" class="form-control mob" placeholder="Name *" class="form-control" required="">
-                                                <input type="text" pattern="[789][0-9]{9}" class="form-control mob" name="mobile" placeholder="Mobile *" required="">
-
-                                                <input type="email" name="email" class="form-control mob" placeholder="Email :" required="">
-
-                                                <button class="btn theme-btn-1 btn-effect-3 text-uppercase" name="send" type="submit">Book Now</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="ltn__about-us-area section-bg-1 bg-image-right-before pt-120 pb-90">
-            <div class="container">
-                <div id="Highlights" class="row">
-                    <div class="col-lg-6 align-self-center">
-                        <div class="about-us-info-wrap">
-                            <div class="section-title-area ltn__section-title-2--- mb-20">
-                                <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Qualities</h6>
-                                <h1 class="section-title">Location Advantages</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit maiores dolorum tempore asperiores commodi nobis, officiis accusamus fugiat mollitia Sector-99 are:</p>
-                            </div>
-                            <ul class="ltn__list-item-half-new ltn__list-item-half ltn__list-item-half-2 clearfix">
-                                <li style="padding-bottom: 25px;">
-                                    <i class="icon-done"></i>
-                                    <b>Ample Greenery.</b>
-                                </li>
-                                <li style="padding-bottom: 25px;">
-                                    <i class="icon-done"></i>
-                                    <b>Near Lorem Ipsum.</b>
-                                </li>
-                                <li style="padding-bottom: 25px;">
-                                    <i class="icon-done"></i>
-                                    <b>Developing Sector.</b>
-                                </li>
-                                <li style="padding-bottom: 25px;">
-                                    <i class="icon-done"></i>
-                                    <b>Sound Road Network.</b>
-                                </li>
-                                <li style="padding-bottom: 25px;">
-                                    <i class="icon-done"></i>
-                                    <b>There are around 532 units on offer.</b>
-                                </li>
-                                <li style="padding-bottom: 25px;">
-                                    <i class="icon-done"></i>
-                                    <b>The project is spread over an area of 10.1 acres.</b>
-                                </li>
-                            </ul>
-                            <div class="ltn__animation-pulse2 text-center mt-30">
-                                <a href="tel:+919999999999" class="ltn__video-play-btn bg-white--- ltn__secondary-bg">
-                                    <i class="icon-phone-call  ltn__secondary-color--- white-color"></i>
+    <div class="ltn__about-us-area pt-150 pb-100 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="about-us-img-wrap about-img-left">
+                        <img src="img/others/11c.png" alt="About Us Image">
+                        <div class="about-us-img-info about-us-img-info-2 about-us-img-info-3 d-none">
+                            <div class="ltn__video-img ltn__animation-pulse1">
+                                <img src="img/others/8.png" alt="video popup bg image">
+                                <a class="ltn__video-icon-2 ltn__video-icon-2-border---" href="#">
+                                    <i class="fa fa-play"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 align-self-center">
-                        <div class="about-us-img-wrap about-img-left">
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </div>
-
-
-        <div class="ltn__apartments-plan-area pt-120 pb-70">
-            <div class="container">
-                <div id="Apartments_Plan" class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title-area ltn__section-title-2--- text-center">
-                            <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Apartment Sketch</h6>
-                            <h1 class="section-title">Apartments Plan</h1>
+                <div class="col-lg-6 align-self-center">
+                    <div class="about-us-info-wrap">
+                        <div id="Price_List" class="section-title-area ltn__section-title-2--- mb-30">
+                            <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Pricing</h6>
+                            <h1 class="section-title">APARTMENT PRICE
+                            </h1>
+                            <p> <b>Lorem ipsum dolor sit amet consectetur, adipisicing :</b> <br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, perspiciatis maiores :
+                            </p>
                         </div>
-                        <div class="ltn__tab-menu ltn__tab-menu-3 ltn__tab-menu-top-right-- text-uppercase--- text-center">
-                            <div class="nav">
-                                <a class="active show" data-bs-toggle="tab" href="#liton_tab_3_2">3 BHK</a>
-                                <a data-bs-toggle="tab" href="#liton_tab_3_3" class="">4 BHK</a>
+                        <div class="ltn__feature-item ltn__feature-item-3">
+                            <div class="ltn__feature-icon">
+                                <span>
+                                    <img src="img/favicon.jpg" alt="" />
+                                </span>
+                            </div>
+                            <div class="ltn__feature-info">
+                                <h4><a href="#">3 BHK 2015 Sq.Ft Price</a></h4>
+                                <p><i class="fa fa-rupee-sign"></i> 1.51 Cr Onwards</p>
                             </div>
                         </div>
-                        <div class="tab-content">
-                            <div class="tab-pane fade active show" id="liton_tab_3_2">
-                                <div class="ltn__product-tab-content-inner">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="apartments-plan-img">
-                                                <h6 style="margin:0px; justify-content: center; text-align: center; ">3 BHK 2015 Sq.Ft</h6>
-                                                <a href="img/3bhk-1.jpg" data-rel="lightcase:myCollection">
-                                                    <img src="img/3bhk-1.jpg" alt="#">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="apartments-plan-img">
-                                                <h6 style="margin:0px; justify-content: center; text-align: center; ">3 BHK 2050 Sq.Ft</h6>
-                                                <a href="img/3bhk-2.jpg" data-rel="lightcase:myCollection">
-                                                    <img src="img/3bhk-2.jpg" alt="#">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row" style="justify-content: center; align-items: center;">
-                                        <div class="col-lg-6">
-                                            <div class="apartments-plan-img">
-                                                <h6 style="margin:0px; justify-content: center; text-align: center; ">3 BHK + Servent 2150 Sq.Ft</h6>
-                                                <a href="img/3bhk-3.jpg" data-rel="lightcase:myCollection">
-                                                    <img src="img/3bhk-3.jpg" alt="#">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="ltn__feature-item ltn__feature-item-3">
+                            <div class="ltn__feature-icon">
+                                <span>
+                                    <img src="img/favicon.jpg" alt="" />
+                                </span>
                             </div>
-                            <div class="tab-pane fade" id="liton_tab_3_3">
-                                <div class="ltn__product-tab-content-inner">
-                                    <div class="row" style="justify-content: center; align-items: center;">
-                                        <div class="col-lg-6">
-                                            <div class="apartments-plan-img">
-                                                <h6 style="margin:0px; justify-content: center; text-align: center; ">4 BHK + Servent 2675 Sq.Ft</h6>
-                                                <a href="img/4bhk.jpg" data-rel="lightcase:myCollection">
-                                                    <img src="img/4bhk.jpg" alt="#">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="ltn__feature-info">
+                                <h4><a href="#">3 BHK 2050 Sq.Ft Price</a></h4>
+                                <p><i class="fa fa-rupee-sign"></i> 1.53 Cr Onwards</p>
+                            </div>
+                        </div>
+                        <div class="ltn__feature-item ltn__feature-item-3">
+                            <div class="ltn__feature-icon">
+                                <span>
+                                    <img src="img/favicon.jpg" alt="" />
+                                </span>
+                            </div>
+                            <div class="ltn__feature-info">
+                                <h4><a href="#">3 BHK + Servent 2150 Sq.Ft Price</a></h4>
+                                <p><i class="fa fa-rupee-sign"></i> 1.61 Cr Onwards</p>
+                            </div>
+                        </div>
+                        <div class="ltn__feature-item ltn__feature-item-3">
+                            <div class="ltn__feature-icon">
+                                <span>
+                                    <img src="img/favicon.jpg" alt="" />
+                                </span>
+                            </div>
+                            <div class="ltn__feature-info">
+                                <h4><a href="#">4 BHK + Servent 2675 Sq.Ft Price</a></h4>
+                                <p><i class="fa fa-rupee-sign"></i> 2 Cr Onwards</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <div id="Highlights" class="pt mt" style="justify-content: center; text-align: center; overflow-x: hidden; overflow-y: hidden;">
+    <div class="ltn__feature-area section-bg-1 pt-50 mb-120--- pb-100">
+        <div class="container-fluid">
+            <div id="Location" class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2--- text-center">
+                        <h1 class="section-title">Location</h1>
+                        <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Site Location</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row ltn__custom-gutter--- justify-content-center">
+                <div class="col-lg-12 col-sm-12 col-12">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14010.090289410171!2d77.30517932361255!3d28.614096205841342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4c14055f953%3A0xde876ab91354cc65!2sCentral%20Market%2C%20Block%2015%2C%20Kalyan%20Puri%2C%20New%20Delhi%2C%20Delhi%20110091!5e0!3m2!1sen!2sin!4v1672744463956!5m2!1sen!2sin"
+                        width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="Aminities" class="ltn__category-area ltn__product-gutter section-bg-1--- pt-115 pb-90 ">
+        <div class="container">
             <div class="row">
-                <div class="col-lg-6 remove-img" style="justify-content: center; text-align: center; vertical-align: middle;">
-                    <img src="img/highlights.jpg" alt="..." height="100%" style="max-width: none; margin: auto;">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2--- text-center">
+                        <h1 class="section-title">Amenities and Features</h1>
+                    </div>
                 </div>
-                <div class="col-lg-6" style="justify-content: flex-start; text-align: start; background-color: black; padding: 5px 15px 15px 30px; margin-left: 0px;">
-                    <div>
-                        <div style="display: inline;"><img src="img/svgs/life-preserver.svg" alt="..." width="75px" style="padding: 25px; border-radius: 5rem; background-color: white; margin: auto;"></div>
-                        <div style="text-align: left; display: inline-block; align-items: center; margin-left: 20px; width: 70%; letter-spacing: 1px; vertical-align: middle; padding-top: 26px;">
-                            <h5 style="color: #fff;margin-bottom: 10px;">WORLD CLASS AMENITIES</h5>
-                            <p style="color: #fff; line-height: 1.6;">Lorem Ipsum is loaded with tons of  world class amenities such as clubhouse, Cricket ground, swimming pool, Party Lawn etc.</p>
+            </div>
+            <div class="row ltn__category-slider-active--- slick-arrow-1 justify-content-center">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                    <div class="ltn__category-item ltn__category-item-5 text-center">
+                        <a href="#">
+                            <span class="category-icon"><img src="img/aminities/1.jpg" alt=""></span>
+                            <span class="category-title">Metro Connectivity</span>
+                            <span class="category-btn"><i class="flaticon-right-arrow"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                    <div class="ltn__category-item ltn__category-item-5 text-center">
+                        <a href="#">
+                            <span class="category-icon"><img src="img/aminities/2.jpg" alt=""></span>
+                            <span class="category-title">Store</span>
+                            <span class="category-btn"><i class="flaticon-right-arrow"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                    <div class="ltn__category-item ltn__category-item-5 text-center">
+                        <a href="#">
+                            <span class="category-icon"><img src="img/aminities/3.jpg" alt="..."></span>
+                            <span class="category-title">24x7 Security</span>
+                            <span class="category-btn"><i class="flaticon-right-arrow"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                    <div class="ltn__category-item ltn__category-item-5 text-center">
+                        <a href="#">
+                            <span class="category-icon"><img src="img/aminities/4.jpg" alt="..."></span>
+                            <span class="category-title">Parking Space</span>
+                            <span class="category-btn"><i class="flaticon-right-arrow"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                    <div class="ltn__category-item ltn__category-item-5 text-center">
+                        <a href="#">
+                            <span class="category-icon"><img src="img/aminities/5.jpg" alt="..."></span>
+                            <span class="category-title">ATM</span>
+                            <span class="category-btn"><i class="flaticon-right-arrow"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                    <div class="ltn__category-item ltn__category-item-5 text-center">
+                        <a href="#">
+                            <span class="category-icon"><img src="img/aminities/6.jpg" alt="..."></span>
+                            <span class="category-title">College</span>
+                            <span class="category-btn"><i class="flaticon-right-arrow"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="Gallery" class="ltn__img-slider-area mb-90 pt-20">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2--- text-center">
+
+                        <h1 class="section-title">Gallery</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row ltn__image-slider-5-active slick-arrow-1 slick-arrow-1-inner ltn__no-gutter-all">
+                <div class="col-lg-12">
+                    <div class="ltn__img-slide-item-4">
+                        <a href="img/gallery/1.png" class="img-fluid" data-rel="lightcase:myCollection">
+                            <img src="img/gallery/1.png" alt="Image">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__img-slide-item-4">
+                        <a href="img/gallery/2.png" class="img-fluid" data-rel="lightcase:myCollection">
+                            <img src="img/gallery/2.png" alt="Image">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__img-slide-item-4">
+                        <a href="img/gallery/3.png" class="img-fluid" data-rel="lightcase:myCollection">
+                            <img src="img/gallery/3.png" alt="Image">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__img-slide-item-4">
+                        <a href="img/gallery/4.png" class="img-fluid" data-rel="lightcase:myCollection">
+                            <img src="img/gallery/4.png" alt="Image">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__img-slide-item-4">
+                        <a href="img/gallery/5.png" class="img-fluid" data-rel="lightcase:myCollection">
+                            <img src="img/gallery/5.png" alt="Image">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__img-slide-item-4">
+                        <a href="img/gallery/6.png" class="img-fluid" data-rel="lightcase:myCollection">
+                            <img src="img/gallery/6.png" alt="Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="Testimonial" class="ltn__testimonial-area section-bg-1--- bg-image-top pt-20 pb-70"
+        data-bs-bg="img/bg/20.html">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2--- text-center">
+                        <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Our Testimonial</h6>
+                        <h1 class="section-title">Customer Feedback</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row ltn__testimonial-slider-5-active slick-arrow-1">
+                <div class="col-lg-4">
+                    <div class="ltn__testimonial-item ltn__testimonial-item-7">
+                        <div class="ltn__testimoni-info">
+                            <p><i class="flaticon-left-quote-1"></i>
+                                " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis veritatis earum
+                                dolorum dolor unde eaque exercitationem reiciendis autem. Voluptatem, odit iste
+                                temporibus repudiandae eos nihil perferendis voluptate blanditiis iure nostrum. "</p>
+                            <div class="ltn__testimoni-info-inner">
+                                <div class="ltn__testimoni-img">
+                                    <img src="img/testimonials.jpg" alt="#">
+                                </div>
+                                <div class="ltn__testimoni-name-designation">
+                                    <h5>Yogesh Verma</h5>
+                                    <label>Customer</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div style="margin-top: 10px;">
-                        <div style="display: inline;display: inline-block; background-color: #fff; border-radius: 5rem; overflow: hidden; perspective: 0px; vertical-align: middle;"><img src="img/svgs/map.svg" alt="..." width="75px" style="padding: 25px; background-color: white; margin: auto;"></div>
-                        <div style="text-align: left; display: inline-block; align-items: center; margin-left: 20px; width: 70%; letter-spacing: 1px; vertical-align: middle; padding-top: 26px;">
-                            <h5 style="color: #fff;margin-bottom: 10px;">EXQUISITE LOCATION</h5>
-                            <p style="color: #fff; line-height: 1.6;">We are situated in the most peculiar location of Ipsum. Though have multiple location advantages.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ltn__testimonial-item ltn__testimonial-item-7">
+                        <div class="ltn__testimoni-info">
+                            <p><i class="flaticon-left-quote-1"></i>
+                                " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis veritatis earum
+                                dolorum dolor unde eaque exercitationem reiciendis autem. Voluptatem, odit iste
+                                temporibus repudiandae eos nihil perferendis voluptate blanditiis iure nostrum. "</p>
+                            <div class="ltn__testimoni-info-inner">
+                                <div class="ltn__testimoni-img">
+                                    <img src="img/testimonials.jpg" alt="#">
+                                </div>
+                                <div class="ltn__testimoni-name-designation">
+                                    <h5>Rakesh Gusain</h5>
+                                    <label>Customer</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div style="margin-top: 10px;">
-                    <div style="display: inline;display: inline-block; background-color: #fff; border-radius: 5rem; overflow: hidden; perspective: 0px; vertical-align: middle;"><img src="img/svgs/people-fill.svg" alt="..." width="75px" style="padding: 25px; background-color: white; margin: auto;"></div>
-                        <div style="text-align: left; display: inline-block; align-items: center; margin-left: 20px; width: 70%; letter-spacing: 1px; vertical-align: middle; padding-top: 26px;">
-                            <h5 style="color: #fff;margin-bottom: 10px;">WELL SUITED FOR FAMILY</h5>
-                            <p style="color: #fff; line-height: 1.6;">Lorem Ipsum is well suited for you and your family. Enjoy your precious moments in the green villa.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ltn__testimonial-item ltn__testimonial-item-7">
+                        <div class="ltn__testimoni-info">
+                            <p><i class="flaticon-left-quote-1"></i>
+                                " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis veritatis earum
+                                dolorum dolor unde eaque exercitationem reiciendis autem. Voluptatem, odit iste
+                                temporibus repudiandae eos nihil perferendis voluptate blanditiis iure nostrum. "</p>
+                            <div class="ltn__testimoni-info-inner">
+                                <div class="ltn__testimoni-img">
+                                    <img src="img/testimonials.jpg" alt="#">
+                                </div>
+                                <div class="ltn__testimoni-name-designation">
+                                    <h5>Tushar Arora</h5>
+                                    <label>Customer</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div style="margin-top: 10px;">
-                    <div style="display: inline;display: inline-block; background-color: #fff; border-radius: 5rem; overflow: hidden; perspective: 0px; vertical-align: middle;"><img src="img/svgs/currency-rupee.svg" alt="..." width="75px" style="padding: 25px; background-color: white; margin: auto;"></div>
-                        <div style="text-align: left; display: inline-block; align-items: center; margin-left: 20px; width: 70%; letter-spacing: 1px; vertical-align: middle; padding-top: 26px;">
-                            <h5 style="color: #fff;margin-bottom: 10px;">AFFORDABLE PRICE</h5>
-                            <p style="color: #fff; line-height: 1.6;">Lorem Ipsum provide you with the best price for your luxurious life. Starting @₹99 Lac*.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ltn__testimonial-item ltn__testimonial-item-7">
+                        <div class="ltn__testimoni-info">
+                            <p><i class="flaticon-left-quote-1"></i>
+                                " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis veritatis earum
+                                dolorum dolor unde eaque exercitationem reiciendis autem. Voluptatem, odit iste
+                                temporibus repudiandae eos nihil perferendis voluptate blanditiis iure nostrum. "</p>
+                            <div class="ltn__testimoni-info-inner">
+                                <div class="ltn__testimoni-img">
+                                    <img src="img/testimonials.jpg" alt="#">
+                                </div>
+                                <div class="ltn__testimoni-name-designation">
+                                    <h5>Saurabh Kumar Agrawal</h5>
+                                    <label>Customer</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom" data-bs-bg="img/1.jpg--">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---"
+                        style="background-image: linear-gradient(to right, #006861 , #02b0a4);">
+                        <div class="coll-to-info text-color-white">
+                            <h1>We are just a call back away.</h1>
+                            <!-- <p>We can help you realize your dream of a new home</p> -->
+                        </div>
+                        <div class="btn-wrapper">
+                            <a class="btn btn-effect-3 btn-white" href="tel:+919999999999">Talk to Sales Expert <i
+                                    class="icon-next"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <div class="ltn__about-us-area pt-150 pb-100 ">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 align-self-center">
-                        <div class="about-us-img-wrap about-img-left">
-                            <img src="img/others/11c.png" alt="About Us Image">
-                            <div class="about-us-img-info about-us-img-info-2 about-us-img-info-3 d-none">
-                                <div class="ltn__video-img ltn__animation-pulse1">
-                                    <img src="img/others/8.png" alt="video popup bg image">
-                                    <a class="ltn__video-icon-2 ltn__video-icon-2-border---" href="#">
-                                        <i class="fa fa-play"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 align-self-center">
-                        <div class="about-us-info-wrap">
-                            <div id="Price_List" class="section-title-area ltn__section-title-2--- mb-30">
-                                <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Pricing</h6>
-                                <h1 class="section-title">APARTMENT PRICE
-                                </h1>
-                                <p> <b>Lorem ipsum dolor sit amet consectetur, adipisicing :</b> <br>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, perspiciatis maiores :</p>
-                            </div>
-                            <div class="ltn__feature-item ltn__feature-item-3">
-                                <div class="ltn__feature-icon">
-                                    <span>
-                                        <img src="img/favicon.jpg" alt="" />
-                                    </span>
-                                </div>
-                                <div class="ltn__feature-info">
-                                    <h4><a href="#">3 BHK 2015 Sq.Ft Price</a></h4>
-                                    <p><i class="fa fa-rupee-sign"></i> 1.51 Cr Onwards</p>
-                                </div>
-                            </div>
-                            <div class="ltn__feature-item ltn__feature-item-3">
-                                <div class="ltn__feature-icon">
-                                    <span>
-                                        <img src="img/favicon.jpg" alt="" />
-                                    </span>
-                                </div>
-                                <div class="ltn__feature-info">
-                                    <h4><a href="#">3 BHK 2050 Sq.Ft Price</a></h4>
-                                    <p><i class="fa fa-rupee-sign"></i> 1.53 Cr Onwards</p>
-                                </div>
-                            </div>
-                            <div class="ltn__feature-item ltn__feature-item-3">
-                                <div class="ltn__feature-icon">
-                                    <span>
-                                        <img src="img/favicon.jpg" alt="" />
-                                    </span>
-                                </div>
-                                <div class="ltn__feature-info">
-                                    <h4><a href="#">3 BHK + Servent 2150 Sq.Ft Price</a></h4>
-                                    <p><i class="fa fa-rupee-sign"></i> 1.61 Cr Onwards</p>
-                                </div>
-                            </div>
-                            <div class="ltn__feature-item ltn__feature-item-3">
-                                <div class="ltn__feature-icon">
-                                    <span>
-                                        <img src="img/favicon.jpg" alt="" />
-                                    </span>
-                                </div>
-                                <div class="ltn__feature-info">
-                                    <h4><a href="#">4 BHK + Servent 2675 Sq.Ft Price</a></h4>
-                                    <p><i class="fa fa-rupee-sign"></i> 2 Cr Onwards</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="ltn__feature-area section-bg-1 pt-50 mb-120--- pb-100">
+    <footer class="ltn__footer-area  ">
+        <div class="footer-top-area  section-bg-2 plr--5">
             <div class="container-fluid">
-                <div id="Location" class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title-area ltn__section-title-2--- text-center">
-                            <h1 class="section-title">Location</h1>
-                            <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Site Location</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="row ltn__custom-gutter--- justify-content-center">
-                    <div class="col-lg-12 col-sm-12 col-12">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14010.090289410171!2d77.30517932361255!3d28.614096205841342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4c14055f953%3A0xde876ab91354cc65!2sCentral%20Market%2C%20Block%2015%2C%20Kalyan%20Puri%2C%20New%20Delhi%2C%20Delhi%20110091!5e0!3m2!1sen!2sin!4v1672744463956!5m2!1sen!2sin" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="Aminities" class="ltn__category-area ltn__product-gutter section-bg-1--- pt-115 pb-90 ">
-            <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title-area ltn__section-title-2--- text-center">
-                            <h1 class="section-title">Amenities and Features</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="row ltn__category-slider-active--- slick-arrow-1 justify-content-center">
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                        <div class="ltn__category-item ltn__category-item-5 text-center">
-                            <a href="#">
-                                <span class="category-icon"><img src="img/aminities/1.jpg" alt=""></span>
-                                <span class="category-title">Metro Connectivity</span>
-                                <span class="category-btn"><i class="flaticon-right-arrow"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                        <div class="ltn__category-item ltn__category-item-5 text-center">
-                            <a href="#">
-                                <span class="category-icon"><img src="img/aminities/2.jpg" alt=""></span>
-                                <span class="category-title">Store</span>
-                                <span class="category-btn"><i class="flaticon-right-arrow"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                        <div class="ltn__category-item ltn__category-item-5 text-center">
-                            <a href="#">
-                                <span class="category-icon"><img src="img/aminities/3.jpg" alt="..."></span>
-                                <span class="category-title">24x7 Security</span>
-                                <span class="category-btn"><i class="flaticon-right-arrow"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                        <div class="ltn__category-item ltn__category-item-5 text-center">
-                            <a href="#">
-                                <span class="category-icon"><img src="img/aminities/4.jpg" alt="..."></span>
-                                <span class="category-title">Parking Space</span>
-                                <span class="category-btn"><i class="flaticon-right-arrow"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                        <div class="ltn__category-item ltn__category-item-5 text-center">
-                            <a href="#">
-                                <span class="category-icon"><img src="img/aminities/5.jpg" alt="..."></span>
-                                <span class="category-title">ATM</span>
-                                <span class="category-btn"><i class="flaticon-right-arrow"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                        <div class="ltn__category-item ltn__category-item-5 text-center">
-                            <a href="#">
-                                <span class="category-icon"><img src="img/aminities/6.jpg" alt="..."></span>
-                                <span class="category-title">College</span>
-                                <span class="category-btn"><i class="flaticon-right-arrow"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="Gallery" class="ltn__img-slider-area mb-90 pt-20">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title-area ltn__section-title-2--- text-center">
-
-                            <h1 class="section-title">Gallery</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="row ltn__image-slider-5-active slick-arrow-1 slick-arrow-1-inner ltn__no-gutter-all">
-                    <div class="col-lg-12">
-                        <div class="ltn__img-slide-item-4">
-                            <a href="img/gallery/1.png" class="img-fluid" data-rel="lightcase:myCollection">
-                                <img src="img/gallery/1.png" alt="Image">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="ltn__img-slide-item-4">
-                            <a href="img/gallery/2.png" class="img-fluid" data-rel="lightcase:myCollection">
-                                <img src="img/gallery/2.png" alt="Image">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="ltn__img-slide-item-4">
-                            <a href="img/gallery/3.png" class="img-fluid" data-rel="lightcase:myCollection">
-                                <img src="img/gallery/3.png" alt="Image">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="ltn__img-slide-item-4">
-                            <a href="img/gallery/4.png" class="img-fluid" data-rel="lightcase:myCollection">
-                                <img src="img/gallery/4.png" alt="Image">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="ltn__img-slide-item-4">
-                            <a href="img/gallery/5.png" class="img-fluid" data-rel="lightcase:myCollection">
-                                <img src="img/gallery/5.png" alt="Image">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="ltn__img-slide-item-4">
-                            <a href="img/gallery/6.png" class="img-fluid" data-rel="lightcase:myCollection">
-                                <img src="img/gallery/6.png" alt="Image">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="Testimonial" class="ltn__testimonial-area section-bg-1--- bg-image-top pt-20 pb-70" data-bs-bg="img/bg/20.html">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title-area ltn__section-title-2--- text-center">
-                            <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Our Testimonial</h6>
-                            <h1 class="section-title">Customer Feedback</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="row ltn__testimonial-slider-5-active slick-arrow-1">
-                    <div class="col-lg-4">
-                        <div class="ltn__testimonial-item ltn__testimonial-item-7">
-                            <div class="ltn__testimoni-info">
-                                <p><i class="flaticon-left-quote-1"></i>
-                                    " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis veritatis earum dolorum dolor unde eaque exercitationem reiciendis autem. Voluptatem, odit iste temporibus repudiandae eos nihil perferendis voluptate blanditiis iure nostrum. "</p>
-                                <div class="ltn__testimoni-info-inner">
-                                    <div class="ltn__testimoni-img">
-                                        <img src="img/testimonials.jpg" alt="#">
-                                    </div>
-                                    <div class="ltn__testimoni-name-designation">
-                                        <h5>Yogesh Verma</h5>
-                                        <label>Customer</label>
-                                    </div>
+                    <div class="col-xl-4 col-md-6 col-sm-6 col-12">
+                        <div class="footer-widget footer-about-widget">
+                            <div class="footer-logo">
+                                <div class="site-logo" style="justify-content: center; text-align: center;">
+                                    <img src="img/logo-w.png" alt="Logo" style="width: 70%;">
                                 </div>
                             </div>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam culpa ut, rem, tenetur
+                                eveniet aut hic error expedita illum illo libero voluptatum veniam eaque. Quo quasi
+                                dolor harum distinctio nulla.</p>
+                            <a href="#"> <button class="btn theme-btn-1 btn-effect-3 text-uppercase"
+                                    style="padding: 10px 15px 10px 15px;">More</button></a>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="ltn__testimonial-item ltn__testimonial-item-7">
-                            <div class="ltn__testimoni-info">
-                                <p><i class="flaticon-left-quote-1"></i>
-                                    " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis veritatis earum dolorum dolor unde eaque exercitationem reiciendis autem. Voluptatem, odit iste temporibus repudiandae eos nihil perferendis voluptate blanditiis iure nostrum. "</p>
-                                <div class="ltn__testimoni-info-inner">
-                                    <div class="ltn__testimoni-img">
-                                        <img src="img/testimonials.jpg" alt="#">
-                                    </div>
-                                    <div class="ltn__testimoni-name-designation">
-                                        <h5>Rakesh Gusain</h5>
-                                        <label>Customer</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ltn__testimonial-item ltn__testimonial-item-7">
-                            <div class="ltn__testimoni-info">
-                                <p><i class="flaticon-left-quote-1"></i>
-                                    " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis veritatis earum dolorum dolor unde eaque exercitationem reiciendis autem. Voluptatem, odit iste temporibus repudiandae eos nihil perferendis voluptate blanditiis iure nostrum. "</p>
-                                <div class="ltn__testimoni-info-inner">
-                                    <div class="ltn__testimoni-img">
-                                        <img src="img/testimonials.jpg" alt="#">
-                                    </div>
-                                    <div class="ltn__testimoni-name-designation">
-                                        <h5>Tushar Arora</h5>
-                                        <label>Customer</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ltn__testimonial-item ltn__testimonial-item-7">
-                            <div class="ltn__testimoni-info">
-                                <p><i class="flaticon-left-quote-1"></i>
-                                    " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis veritatis earum dolorum dolor unde eaque exercitationem reiciendis autem. Voluptatem, odit iste temporibus repudiandae eos nihil perferendis voluptate blanditiis iure nostrum. "</p>
-                                <div class="ltn__testimoni-info-inner">
-                                    <div class="ltn__testimoni-img">
-                                        <img src="img/testimonials.jpg" alt="#">
-                                    </div>
-                                    <div class="ltn__testimoni-name-designation">
-                                        <h5>Saurabh Kumar Agrawal</h5>
-                                        <label>Customer</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
-        <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom" data-bs-bg="img/1.jpg--">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---" style="background-image: linear-gradient(to right, #006861 , #02b0a4);">
-                            <div class="coll-to-info text-color-white">
-                                <h1>We are just a call back away.</h1>
-                                <!-- <p>We can help you realize your dream of a new home</p> -->
-                            </div>
-                            <div class="btn-wrapper">
-                                <a class="btn btn-effect-3 btn-white" href="tel:+919999999999">Talk to Sales Expert <i class="icon-next"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <footer class="ltn__footer-area  ">
-            <div class="footer-top-area  section-bg-2 plr--5">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xl-4 col-md-6 col-sm-6 col-12">
-                            <div class="footer-widget footer-about-widget">
-                                <div class="footer-logo">
-                                    <div class="site-logo" style="justify-content: center; text-align: center;">
-                                        <img src="img/logo-w.png" alt="Logo" style="width: 70%;">
-                                    </div>
-                                </div>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam culpa ut, rem, tenetur eveniet aut hic error expedita illum illo libero voluptatum veniam eaque. Quo quasi dolor harum distinctio nulla.</p>
-                                <a href="#"> <button class="btn theme-btn-1 btn-effect-3 text-uppercase" style="padding: 10px 15px 10px 15px;">More</button></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6 col-sm-6 col-12">
-                            <div class="footer-widget footer-menu-widget clearfix">
-                                <h4 class="footer-title">Contact Us</h4>
-                                <div class="footer-address">
-                                    <ul>
-                                        <li>
-                                            <div class="footer-address-icon">
-                                                <i class="icon-placeholder"></i>
-                                            </div>
-                                            <div class="footer-address-info">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="footer-address-icon">
-                                                <i class="icon-call"></i>
-                                            </div>
-                                            <div class="footer-address-info">
-                                                <p><a href="tel:+919999999999">+91-9999999999</a></p>
-                                            </div>
-                                        </li>
-                                        <li style="padding-bottom: 30px;">
-                                            <div class="footer-address-icon">
-                                                <i class="icon-mail"></i>
-                                            </div>
-                                            <div class="footer-address-info">
-                                                <p><a href="mailto:test@gmail.com"><span class="__cf_email__" data-cfemail="">test@gmail.com</span></a></p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-md-6 col-sm-6 col-12">
-                            <div class="footer-widget footer-menu-widget clearfix">
-                                <h4 class="footer-title" style="justify-content: center; text-align: center;">Book A Site Visit</h4>
-                                <div id='response'></div>
-                                <div class="footer-address">
-                                    <form action="sendmail.php" method="POST" style="justify-content: center; text-align: center;">
-                                        <input type="text" class="form-control mob" name="name" placeholder="Name *" required="">
-                                        <input type="number" name="mobile" class="mob form-control" placeholder="Mobile *" required="">
-                                        <input type="text" class="form-control mob" name="email" placeholder="Email :">
-
-                                        <button class="btn theme-btn-1 btn-effect-3 text-uppercase" name="send" type="submit" style="background-image: linear-gradient(to right, #006861 , #02b0a4);">Book Now</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-
-
-        <footer class="ltn__footer-area  ">
-            <div class="pb-30 pt-60 plr--5 section-bg-6">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div style="text-align:center;background-color:#44;" class="col">
-                            <div class="footer-widget footer-about-widget">
-                                <div class="footer-logo">
-                                    <div class="site-logo" style="display: flex; justify-content: center;">
-                                    </div>
-                                </div>
-                                <h5 style="font-weight:normal;">ARE YOU LOOKING FOR?</h5>
-                                <p>Lorem ipsum dolor<br>
-                                    Lorem ipsum dolor<br>
-                                    Lorem ipsum dolor <br>
-                                    Lorem ipsum dolor </p>
-                            </div>
-                        </div>
-                        <div style="text-align:center;" class="col">
-                            <div class="footer-widget footer-menu-widget clearfix">
-                                <h5 style="font-weight:normal;">3&4 BHK IN GURGAON</h5>
-                                <div class="footer-address">
-                                    <ul>
-                                        <li>
-                                            <p>Lorem ipsum dolor<br>
-                                                Lorem ipsum dolor<br>
-                                                Lorem ipsum dolor <br>
-                                                Lorem ipsum dolor </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="text-align:center;" class="col">
-                            <div class="footer-widget footer-menu-widget clearfix">
-                                <h5 style="font-weight:normal;">FLAT IN SECTOR 79 GURGAON</h5>
-                                <div class="footer-address">
-                                    <ul>
-                                        <li>
-                                            <p>Lorem ipsum dolor<br>
-                                                Lorem ipsum dolor<br>
-                                                Lorem ipsum dolor <br>
-                                                Lorem ipsum dolor </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="text-align:center;" class="col">
-                            <div class="footer-widget footer-menu-widget clearfix">
-                                <h5 style="font-weight:normal;">3&4 BHK IN GURGAON</h5>
-                                <div class="footer-address">
-                                    <ul>
-                                        <li>
-                                            <p>Lorem ipsum dolor<br>
-                                                Lorem ipsum dolor<br>
-                                                Lorem ipsum dolor <br>
-                                                Lorem ipsum dolor </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="ltn__copyright-area ltn__copyright-2 section-bg-7  plr--5">
-                <div class="container-fluid ltn__border-top-2">
-                    <div class="row">
-                        <div class="col-md-6 col-12">
-                            <div class="ltn__copyright-design clearfix">
-                                <p style="font-size:13px;">&copy; Lorem  &nbsp;&nbsp; <b style="font-size:17px;">|</b> &nbsp;&nbsp; <a href="privacy-policy.html">Privacy Policy </a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <div class="CTA">
-            <div class="whatsapp">
-                <a href="https://api.whatsapp.com/send?phone=+919999999999&amp;text=Hi%2C%20I%27m%20interested%20in%20Lorem%20."><i class="fab fa-whatsapp"></i> Whatsapp</a>
-            </div>
-            <div class="callnow">
-                <a href="tel:+919999999999"><i class="icon-call"></i> Call Now</a>
-            </div>
-        </div>
-
-
-        <div class="ltn__modal-area ltn__add-to-cart-modal-area">
-            <div class="modal fade" id="liton_wishlist_modal" tabindex="-1">
-                <div class="modal-dialog modal-md" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="ltn__quick-view-modal-inner">
-                                <div class="modal-product-item">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <form action="sendmail.php" method="POST" style="justify-content: center; text-align: center;">
-                                                <div id='results'></div>
-                                                <h3>Book A Site Visit</h3>
-                                                <input type="text" name="name" class="form-control mob" placeholder="Name *" class="form-control" required="">
-                                                <input type="number" name="mobile" placeholder="Mobile *" class="form-control mob" required="">
-                                                <input type="text" class="form-control mob" name="email" placeholder="Email :">
-
-                                                <button class="btn theme-btn-1 btn-effect-3 text-uppercase" name="send" type="submit" style="background-image: linear-gradient(to right, #006861 , #02b0a4);">Book Now</button>
-                                            </form>
+                    <div class="col-xl-3 col-md-6 col-sm-6 col-12">
+                        <div class="footer-widget footer-menu-widget clearfix">
+                            <h4 class="footer-title">Contact Us</h4>
+                            <div class="footer-address">
+                                <ul>
+                                    <li>
+                                        <div class="footer-address-icon">
+                                            <i class="icon-placeholder"></i>
                                         </div>
+                                        <div class="footer-address-info">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="footer-address-icon">
+                                            <i class="icon-call"></i>
+                                        </div>
+                                        <div class="footer-address-info">
+                                            <p><a href="tel:+919999999999">+91-9999999999</a></p>
+                                        </div>
+                                    </li>
+                                    <li style="padding-bottom: 30px;">
+                                        <div class="footer-address-icon">
+                                            <i class="icon-mail"></i>
+                                        </div>
+                                        <div class="footer-address-info">
+                                            <p><a href="mailto:test@gmail.com"><span class="__cf_email__"
+                                                        data-cfemail="">test@gmail.com</span></a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6 col-sm-6 col-12">
+                        <div class="footer-widget footer-menu-widget clearfix">
+                            <h4 class="footer-title" style="justify-content: center; text-align: center;">Book A Site
+                                Visit</h4>
+                            <div id='response'></div>
+                            <div class="footer-address">
+                                <form action="sendmail.php" method="POST"
+                                    style="justify-content: center; text-align: center;">
+                                    <input type="text" class="form-control mob" name="name" placeholder="Name *"
+                                        required="">
+                                    <input type="number" name="mobile" class="mob form-control" placeholder="Mobile *"
+                                        required="">
+                                    <input type="text" class="form-control mob" name="email" placeholder="Email :">
+
+                                    <button class="btn theme-btn-1 btn-effect-3 text-uppercase" name="send"
+                                        type="submit"
+                                        style="background-image: linear-gradient(to right, #006861 , #02b0a4);">Book
+                                        Now</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <footer class="ltn__footer-area  ">
+        <div class="pb-30 pt-60 plr--5 section-bg-6">
+            <div class="container-fluid">
+                <div class="row">
+                    <div style="text-align:center;background-color:#44;" class="col">
+                        <div class="footer-widget footer-about-widget">
+                            <div class="footer-logo">
+                                <div class="site-logo" style="display: flex; justify-content: center;">
+                                </div>
+                            </div>
+                            <h5 style="font-weight:normal;">ARE YOU LOOKING FOR?</h5>
+                            <p>Lorem ipsum dolor<br>
+                                Lorem ipsum dolor<br>
+                                Lorem ipsum dolor <br>
+                                Lorem ipsum dolor </p>
+                        </div>
+                    </div>
+                    <div style="text-align:center;" class="col">
+                        <div class="footer-widget footer-menu-widget clearfix">
+                            <h5 style="font-weight:normal;">3&4 BHK IN GURGAON</h5>
+                            <div class="footer-address">
+                                <ul>
+                                    <li>
+                                        <p>Lorem ipsum dolor<br>
+                                            Lorem ipsum dolor<br>
+                                            Lorem ipsum dolor <br>
+                                            Lorem ipsum dolor </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align:center;" class="col">
+                        <div class="footer-widget footer-menu-widget clearfix">
+                            <h5 style="font-weight:normal;">FLAT IN SECTOR 79 GURGAON</h5>
+                            <div class="footer-address">
+                                <ul>
+                                    <li>
+                                        <p>Lorem ipsum dolor<br>
+                                            Lorem ipsum dolor<br>
+                                            Lorem ipsum dolor <br>
+                                            Lorem ipsum dolor </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align:center;" class="col">
+                        <div class="footer-widget footer-menu-widget clearfix">
+                            <h5 style="font-weight:normal;">3&4 BHK IN GURGAON</h5>
+                            <div class="footer-address">
+                                <ul>
+                                    <li>
+                                        <p>Lorem ipsum dolor<br>
+                                            Lorem ipsum dolor<br>
+                                            Lorem ipsum dolor <br>
+                                            Lorem ipsum dolor </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="ltn__copyright-area ltn__copyright-2 section-bg-7  plr--5">
+            <div class="container-fluid ltn__border-top-2">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="ltn__copyright-design clearfix">
+                            <p style="font-size:13px;">&copy; Lorem &nbsp;&nbsp; <b style="font-size:17px;">|</b>
+                                &nbsp;&nbsp; <a href="privacy-policy.html">Privacy Policy </a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="CTA">
+        <div class="whatsapp">
+            <a
+                href="https://api.whatsapp.com/send?phone=+919999999999&amp;text=Hi%2C%20I%27m%20interested%20in%20Lorem%20."><i
+                    class="fab fa-whatsapp"></i> Whatsapp</a>
+        </div>
+        <div class="callnow">
+            <a href="tel:+919999999999"><i class="icon-call"></i> Call Now</a>
+        </div>
+    </div>
+
+
+    <div class="ltn__modal-area ltn__add-to-cart-modal-area">
+        <div class="modal fade" id="liton_wishlist_modal" tabindex="-1">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="ltn__quick-view-modal-inner">
+                            <div class="modal-product-item">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <form action="sendmail.php" method="POST"
+                                            style="justify-content: center; text-align: center;">
+                                            <div id='results'></div>
+                                            <h3>Book A Site Visit</h3>
+                                            <input type="text" name="name" class="form-control mob" placeholder="Name *"
+                                                class="form-control" required="">
+                                            <input type="number" name="mobile" placeholder="Mobile *"
+                                                class="form-control mob" required="">
+                                            <input type="text" class="form-control mob" name="email"
+                                                placeholder="Email :">
+
+                                            <button class="btn theme-btn-1 btn-effect-3 text-uppercase" name="send"
+                                                type="submit"
+                                                style="background-image: linear-gradient(to right, #006861 , #02b0a4);">Book
+                                                Now</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -1422,13 +1722,111 @@
                 </div>
             </div>
         </div>
+    </div>
 
     </div>
+
+    <script>
+
+$('.slider').each(function() {
+  var $this = $(this);
+  var $group = $this.find('.slide_group');
+  var $slides = $this.find('.slide');
+  var bulletArray = [];
+  var currentIndex = 0;
+  var timeout;
+  
+  function move(newIndex) {
+    var animateLeft, slideLeft;
+    
+    advance();
+    
+    if ($group.is(':animated') || currentIndex === newIndex) {
+      return;
+    }
+    
+    bulletArray[currentIndex].removeClass('active');
+    bulletArray[newIndex].addClass('active');
+    
+    if (newIndex > currentIndex) {
+      slideLeft = '100%';
+      animateLeft = '-100%';
+    } else {
+      slideLeft = '-100%';
+      animateLeft = '100%';
+    }
+    
+    $slides.eq(newIndex).css({
+      display: 'block',
+      left: slideLeft
+    });
+    $group.animate({
+      left: animateLeft
+    }, function() {
+      $slides.eq(currentIndex).css({
+        display: 'none'
+      });
+      $slides.eq(newIndex).css({
+        left: 0
+      });
+      $group.css({
+        left: 0
+      });
+      currentIndex = newIndex;
+    });
+  }
+  
+  function advance() {
+    clearTimeout(timeout);
+    timeout = setTimeout(function() {
+      if (currentIndex < ($slides.length - 1)) {
+        move(currentIndex + 1);
+      } else {
+        move(0);
+      }
+    }, 4000);
+  }
+  
+  $('.next_btn').on('click', function() {
+    if (currentIndex < ($slides.length - 1)) {
+      move(currentIndex + 1);
+    } else {
+      move(0);
+    }
+  });
+  
+  $('.previous_btn').on('click', function() {
+    if (currentIndex !== 0) {
+      move(currentIndex - 1);
+    } else {
+      move(3);
+    }
+  });
+  
+  $.each($slides, function(index) {
+    var $button = $('<a class="slide_btn">&bull;</a>');
+    
+    if (index === currentIndex) {
+      $button.addClass('active');
+    }
+    $button.on('click', function() {
+      move(index);
+    }).appendTo('.slide_buttons');
+    bulletArray.push($button);
+  });
+  
+  advance();
+});
+
+    </script>
 
 
     <script src="js/plugins.js"></script>
 
     <script src="js/main.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 
 </body>
 
