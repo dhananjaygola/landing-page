@@ -430,7 +430,7 @@
   font-size: 12px;
 }
 
-.login-box form a {
+.login-box form button {
   position: relative;
   display: flex;
   padding: 15px 20px;
@@ -443,10 +443,11 @@
   letter-spacing: 4px;
   width: 50%;
   margin: auto;
+  background: transparent;
 }
 
-.login-box a:hover {
-  background: #02b0a4;
+.login-box button:hover {
+  background: #02b0a4 !important;
   color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 5px #02b0a4,
@@ -455,12 +456,12 @@
               0 0 100px #02b0a4;
 }
 
-.login-box a span {
+.login-box button span {
   position: absolute;
   display: block;
 }
 
-.login-box a span:nth-child(1) {
+.login-box button span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -478,7 +479,7 @@
   }
 }
 
-.login-box a span:nth-child(2) {
+.login-box button span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -497,7 +498,7 @@
   }
 }
 
-.login-box a span:nth-child(3) {
+.login-box button span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -516,7 +517,7 @@
   }
 }
 
-.login-box a span:nth-child(4) {
+.login-box button span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -712,13 +713,13 @@
                 <label>Mobile</label>
               </div>
               <div style="margin-top: 40px;">
-              <a href="#" style="justify-content: center; text-align: center;" type="submit">
+              <button type="submit" style="justify-content: center; text-align: center;">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Submit
-              </a>
+              </button>
             </div>
             </form>
           </div>
